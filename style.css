@@ -1,0 +1,62 @@
+@font-face{
+    font-family: 'lexadeca';
+    src: url('lexa.ttf') format('truetype');
+}
+:root{
+    --background: white;
+    --accent-color: #5666ad;
+    --dark-accent:#43518C;
+    --text-color: black;
+}
+html{
+    font-family: lexadeca;
+}
+body{
+    background-color: var(--background);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+img{
+    width: 250px;
+}
+div.box{
+    margin: 20px;
+    max-width: 300px;
+    border: 3px solid var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+div.row{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    justify-content: space-evenly;
+    width: 100%;
+}
+div.project{
+    border: 3px solid var(--accent-color);
+    border-radius: 10px;
+    width: 30vw;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(lightgray, lightgray);
+
+}
+div.project img{
+    width: 50%;
+}
+div.project:hover{
+    background: linear-gradient(lightgray, grey);
+}

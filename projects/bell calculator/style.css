@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'acnhfont';
+    src: url('FOT-RodinBokutoh\ Pro\ EB.otf') format('otf'),
+         url('FOT-RodinBokutoh\ Pro\ EB.otf') format('woff');
+}
+
+body{
+    background-color: #83E1C3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: acnhfont;
+    text-align: center;
+}
+button{
+    background-color: #EEE9A9;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: acnhfont;
+    font-weight: lighter;
+}
+button:hover{
+    background-color: #d3cf94;
+}
+input{
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-family: acnhfont;
+    font-size: smaller;
+}
+.no-spinner::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-spinner {
+    appearance: textfield;
+    -moz-appearance: textfield; /* Firefox */
+}
+div{
+    background-color: #F5F3E5;
+    padding: 20px;
+    border-radius: 20px;
+}

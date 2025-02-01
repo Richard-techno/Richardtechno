@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="FOT-RodinBokutoh Pro EB.otf">
+</head>
+<body>
+    <img src="" alt="">
+    <h1>Acnh money tree calculator</h1>
+    <img src="mt.png" alt="money tree">
+    <br>
+    <div>
+    <p>How many bells do you want?:</p>
+    <input class="no-spinner" type="number" id="in1" placeholder="bells?...">
+    <br>
+    <br>
+    <button onclick='change()'>calculate trees</button>
+    <p id="cb"></p>
+    <p id="tre"></p>
+    <p id="house"></p>
+    <p id="infte"></p>
+
+    
+</div>
+<br>
+
+    <script>
+        function change() {
+            let input1 = Number(document.getElementById('in1').value);
+            let days = Math.ceil(input1 / 30000)
+            let BellsNeed = days * 10000;
+            let DaysNeed = days + 2;
+            let Bellsget = days * 30000
+            let plusbells = Bellsget - input1;
+            let treehtml = ''
+            for (let i = 0; i < days; i++) {
+                treehtml = treehtml +'<img src="mt.png" alt="money tree" width="70px">';
+            }
+
+            if (input1 < 30000){
+                document.getElementById('cb').textContent = 'please input a higher number!'
+                document.getElementById('infte').textContent = ''
+                document.getElementById('house').textContent = ''
+            } else{
+            document.getElementById('cb').innerHTML = `You will need to plant ${days} trees over ${DaysNeed} days. <br><br> ${treehtml}<br><br> That will get you ${Bellsget} bells`;
+            if (!plusbells == 0) {
+            document.getElementById('house').textContent = `Thats ${plusbells} extra bells!`
+            } else{
+                document.getElementById('house').textContent = ''
+            }
+            document.getElementById('infte').innerHTML = 'Make sure that you always plant 10000 bells in the golden spot <br> in order to get the most bells.'
+
+        }
+
+        }
+
+        
+    </script>
+</body>
+</html>
